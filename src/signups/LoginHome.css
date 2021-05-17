@@ -1,0 +1,64 @@
+.Loginmodal {
+    background-color: white;
+    padding: 1em;
+    width: 40%;
+    max-width: 420px;
+    position: absolute;
+    top: 11.5%;
+    right: 2%;
+    z-index: 1111;
+    float: right;
+}
+
+.signin {
+    margin: 1em auto 0 auto;
+    padding: .5em;
+    cursor: pointer;
+    width: 100%;
+    background: #47A626;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.newCustomer {
+    font-size: .88rem;
+}
+
+.newCustomer:hover {
+    text-decoration: underline;
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+.Desc {
+    margin: 1em auto;
+}
+
+.newC {
+    text-align: center;
+    margin-top: 0;
+}
+
+.Loginmodal::before {
+    content: " ";
+    position: absolute;
+    right: 40%;
+    top: -8%;
+    /* background: white; */
+    border-top: none;
+    border-right: 1rem solid transparent;
+    border-left: 1rem solid transparent;
+    border-bottom: 1rem solid white;
+    z-index: 1;
+}
+
+@media (min-width:1091px)and (max-width:2000px) {
+    .Loginmodal {
+        top: 11%;
+    }
+    .Loginmodal::before {
+        right: 55%;
+    }
+}

@@ -1,0 +1,80 @@
+.nav {
+    position: relative;
+}
+
+.Navbar {
+    background: black;
+    display: flex;
+    justify-content: space-around;
+    position: static;
+    color: white;
+    align-items: center;
+    -webkit-box-shadow: 0 1.5px 6px #777;
+    -moz-box-shadow: 0 1.5px 6px #777;
+    box-shadow: 0 1.5px 6px #777;
+    /* padding: .5em; */
+    height: 82.8px;
+    padding: 0 .8em;
+}
+
+.Navbar>div {
+    padding: .1em 0em;
+    margin: 0 .2em;
+}
+
+.Navbar:hover {
+    background: rgb(59, 56, 56);
+}
+
+
+/* .title {
+    width: 20%;
+} */
+
+.search {
+    width: 55%;
+}
+
+.loginin>p {
+    cursor: pointer;
+}
+
+.location {
+    text-align: center;
+    width: 8%;
+}
+
+.search_item {
+    width: 85%;
+    font-family: sans-serif;
+    padding: .9em;
+    border: none;
+    outline: none;
+}
+
+.form>.searchIcon {
+    width: 5%;
+    position: absolute;
+    /* top: 3.%; */
+    height: 40px;
+    padding-top: 6px;
+    display: inline;
+    background: #47A626;
+    border: none;
+}
+
+.location>svg {
+    cursor: pointer;
+    text-align: center;
+    font-size: 2em;
+}
+
+@media (max-width:672px) {
+    .Navbar {
+        display: block;
+    }
+    .search {
+        margin: 5px;
+        width: 100%;
+    }
+}

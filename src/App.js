@@ -1,24 +1,63 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Navbar from './Navbar.js';
+import Banner from './Banner';
+import LocationModal from './LocationModal';
+import LoginHome from './signups/LoginHome';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
+
+import{useSelector,useDispatch} from 'react-redux';
+import Signin from './signups/Signin';
+import Signup from './signups/Signup';
+
 
 function App() {
+  let modal = useSelector(state=>state.showModal)
+  let Loginhome = useSelector(state=>state.showLoginHome);
+  const dispatch = useDispatch();
+
+  const style = (modal|| Loginhome)?'blur' : '';
+
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+
+            <div className={style}>
+              <Navbar />
+              <div onClick={()=>dispatch({type:'CLOSE_MODAL'})} >
+
+              <Banner />
+
+              </div>
+            </div>
+
+            {((modal))&& <LocationModal /> }
+            {((Loginhome))&&<LoginHome />}
+
+          </Route>
+
+          <Route path="/signin">
+            <Signin />
+          </Route>
+
+          <Route path="/signup">
+            <Signup />
+          </Route>
+
+        </Switch>
+
+      </Router>
+
+    </>
+    
   );
 }
 

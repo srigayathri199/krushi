@@ -1,0 +1,46 @@
+.banner {
+    display: flex;
+    padding: .8em;
+    align-items: center;
+    max-width: 940px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.colored_Text {
+    color: #47A626;
+}
+
+img {
+    width: 100%;
+}
+
+.desc {
+    margin-top: 1em;
+}
+
+.desc>h2 {
+    margin-bottom: .7em;
+}
+
+.cart {
+    position: absolute;
+    /* float: right; */
+    bottom: 8%;
+    right: 12%;
+    background-color: #47A626;
+    padding: 8px;
+    border-radius: 1.5rem;
+    cursor: pointer;
+}
+
+.cart>svg {
+    font-size: 2rem;
+}
+
+@media (max-width:672px) {
+    .banner {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

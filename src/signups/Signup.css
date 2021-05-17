@@ -1,0 +1,25 @@
+.Signup_form {
+    width: 45%;
+    text-align: center;
+    max-width: 400px;
+    margin: 7em auto;
+    border: 0.1px solid rgb(206, 200, 200);
+    padding: 1.5em 1em 1.5em 1em;
+}
+
+.logo_title {
+    top: 7%;
+}
+
+p.already {
+    font-size: 1rem;
+    margin-top: 1.8em;
+    margin-bottom: 1.5em;
+    /* text-align: center; */
+    font-weight: 400;
+}
+
+p>.signin_in_signup {
+    text-decoration: underline;
+    cursor: pointer;
+}
